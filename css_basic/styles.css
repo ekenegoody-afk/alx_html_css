@@ -1,0 +1,34 @@
+/* Make <body> a flex container */
+body {
+    display: flex;
+    flex-direction: column; /* Stack header, main and footer vertically */
+    height: 100vh; /* full page height */
+    margin: 0;
+}
+
+/* Make <main> a flex container */
+main {
+    display: flex;
+    flex-direction: row; /* article and aside side-by-side */
+    flex: auto; /* allow it to grow and take available height */
+}
+
+/* Article takes 2/3 of the width */
+article {
+    flex: 2;
+    overflow-y: auto; /* scroll vertically if content is long */
+    padding: 10px;
+}
+
+/* Aside takes 1/3 of the width */
+aside {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Optional: styling header & footer */
+header, footer {
+    padding: 15px;
+    background: #ddd;
+}
